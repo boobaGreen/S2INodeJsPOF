@@ -13,13 +13,11 @@ class APIFeatures {
 
     // 1B) Advanced filtering
     let queryStr = JSON.stringify(queryObj);
-    queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
-
-    // {difficulty:"easy",duration:{$gte:5}}
-
-    // const query = await Tour.find(queryObj);  original Jonas course first part video
+    queryStr = queryStr.replace(
+      /\b(gte|gt|lte|lt|in|ne)\b/g,
+      (match) => `$${match}`,
+    );
     this.query = this.query.find(JSON.parse(queryStr));
-    // let query = Tour.find(JSON.parse(queryStr));
     return this;
   }
 

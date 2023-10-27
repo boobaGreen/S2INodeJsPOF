@@ -1,0 +1,225 @@
+[
+  {
+    "_id": "653ba7fd8cd659dc236b4967",
+    "buyers": [
+      {
+        "_id": "653b7f8dd6b437985a02a4fa",
+        "name": "Eliana",
+        "id": "653b7f8dd6b437985a02a4fa"
+      },
+      {
+        "_id": "653b7f44d6b437985a02a4f8",
+        "name": "Ayla",
+        "id": "653b7f44d6b437985a02a4f8"
+      },
+      {
+        "_id": "653afc5f684ac741822e6124",
+        "name": "claudio",
+        "id": "653afc5f684ac741822e6124"
+      },
+      {
+        "_id": "653b7fc6d6b437985a02a4ff",
+        "name": "Cristian",
+        "id": "653b7fc6d6b437985a02a4ff"
+      }
+    ],
+    "products": [
+      {
+        "_id": "653b7e23e0406350e6b284c6",
+        "name": "banana",
+        "id": "653b7e23e0406350e6b284c6"
+      },
+      {
+        "_id": "653b7e29e0406350e6b284c8",
+        "name": "cetriolo",
+        "id": "653b7e29e0406350e6b284c8"
+      }
+    ],
+    "createdAt": "2023-10-27T12:05:52.255Z"
+  },
+  {
+    "_id": "653ba8278cd659dc236b4969",
+    "buyers": [
+      {
+        "_id": "653b7f8dd6b437985a02a4fa",
+        "name": "Eliana",
+        "id": "653b7f8dd6b437985a02a4fa"
+      },
+      {
+        "_id": "653b7f44d6b437985a02a4f8",
+        "name": "Ayla",
+        "id": "653b7f44d6b437985a02a4f8"
+      },
+      {
+        "_id": "653afc5f684ac741822e6124",
+        "name": "claudio",
+        "id": "653afc5f684ac741822e6124"
+      },
+      {
+        "_id": "653b7fc6d6b437985a02a4ff",
+        "name": "Cristian",
+        "id": "653b7fc6d6b437985a02a4ff"
+      }
+    ],
+    "products": [
+      {
+        "_id": "653b7e23e0406350e6b284c6",
+        "name": "banana",
+        "id": "653b7e23e0406350e6b284c6"
+      },
+      {
+        "_id": "653b7e29e0406350e6b284c8",
+        "name": "cetriolo",
+        "id": "653b7e29e0406350e6b284c8"
+      },
+      {
+        "_id": "653b7e2fe0406350e6b284ca",
+        "name": "pesca",
+        "id": "653b7e2fe0406350e6b284ca"
+      }
+    ],
+    "createdAt": "2023-10-27T12:05:52.255Z"
+  },
+  {
+    "_id": "653ba85c8cd659dc236b496b",
+    "buyers": [
+      {
+        "_id": "653b7f8dd6b437985a02a4fa",
+        "name": "Eliana",
+        "id": "653b7f8dd6b437985a02a4fa"
+      },
+      {
+        "_id": "653b7f44d6b437985a02a4f8",
+        "name": "Ayla",
+        "id": "653b7f44d6b437985a02a4f8"
+      },
+      {
+        "_id": "653afc5f684ac741822e6124",
+        "name": "claudio",
+        "id": "653afc5f684ac741822e6124"
+      }
+    ],
+    "products": [
+      {
+        "_id": "653b7e23e0406350e6b284c6",
+        "name": "banana",
+        "id": "653b7e23e0406350e6b284c6"
+      },
+      {
+        "_id": "653b7e29e0406350e6b284c8",
+        "name": "cetriolo",
+        "id": "653b7e29e0406350e6b284c8"
+      },
+      {
+        "_id": "653b7e2fe0406350e6b284ca",
+        "name": "pesca",
+        "id": "653b7e2fe0406350e6b284ca"
+      }
+    ],
+    "createdAt": "2023-10-27T12:05:52.255Z"
+  },
+  {
+    "_id": "653b81c118dbaa5cee4a0032",
+    "buyers": [
+      {
+        "_id": "653b7f8dd6b437985a02a4fa",
+        "name": "Eliana",
+        "id": "653b7f8dd6b437985a02a4fa"
+      },
+      {
+        "_id": "653b7f44d6b437985a02a4f8",
+        "name": "Ayla",
+        "id": "653b7f44d6b437985a02a4f8"
+      },
+      {
+        "_id": "653afc5f684ac741822e6124",
+        "name": "claudio",
+        "id": "653afc5f684ac741822e6124"
+      },
+      {
+        "_id": "653b7fc6d6b437985a02a4ff",
+        "name": "Cristian",
+        "id": "653b7fc6d6b437985a02a4ff"
+      }
+    ],
+    "products": [
+      {
+        "_id": "653b7ea5e0406350e6b284ec",
+        "name": "miele",
+        "id": "653b7ea5e0406350e6b284ec"
+      },
+      {
+        "_id": "653b7e95e0406350e6b284e8",
+        "name": "dattero",
+        "id": "653b7e95e0406350e6b284e8"
+      }
+    ],
+    "createdAt": "2023-10-27T09:21:00.531Z"
+  },
+  {
+    "_id": "653b819e18dbaa5cee4a0030",
+    "buyers": [
+      {
+        "_id": "653b7f8dd6b437985a02a4fa",
+        "name": "Eliana",
+        "id": "653b7f8dd6b437985a02a4fa"
+      }
+    ],
+    "products": [
+      {
+        "_id": "653b7ea5e0406350e6b284ec",
+        "name": "miele",
+        "id": "653b7ea5e0406350e6b284ec"
+      },
+      {
+        "_id": "653b7e95e0406350e6b284e8",
+        "name": "dattero",
+        "id": "653b7e95e0406350e6b284e8"
+      }
+    ],
+    "createdAt": "2023-10-27T09:21:00.531Z"
+  },
+  {
+    "_id": "653b816618dbaa5cee4a002e",
+    "buyers": [
+      {
+        "_id": "653b7f2fd6b437985a02a4f6",
+        "name": "Lourdes",
+        "id": "653b7f2fd6b437985a02a4f6"
+      },
+      {
+        "_id": "653b7fc6d6b437985a02a4ff",
+        "name": "Cristian",
+        "id": "653b7fc6d6b437985a02a4ff"
+      },
+      {
+        "_id": "653b8014d6b437985a02a509",
+        "name": "Max",
+        "id": "653b8014d6b437985a02a509"
+      }
+    ],
+    "products": [
+      {
+        "_id": "653b7e35e0406350e6b284cc",
+        "name": "albicocca",
+        "id": "653b7e35e0406350e6b284cc"
+      },
+      {
+        "_id": "653b7e4be0406350e6b284d4",
+        "name": "limone",
+        "id": "653b7e4be0406350e6b284d4"
+      },
+      {
+        "_id": "653b7e75e0406350e6b284e2",
+        "name": "carota",
+        "id": "653b7e75e0406350e6b284e2"
+      },
+      {
+        "_id": "653b7ea0e0406350e6b284ea",
+        "name": "fico",
+        "id": "653b7ea0e0406350e6b284ea"
+      }
+    ],
+    "createdAt": "2023-10-27T09:21:00.531Z"
+  }
+]

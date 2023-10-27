@@ -1,5 +1,4 @@
 const Order = require('../models/orderModel');
-//const catchAsync = require('../utils/catchAsync');
 const factory = require('./handlerFactory');
 
 exports.getAllOrders = factory.getAll(Order);

@@ -1,1 +1,86 @@
-[{}]
+[
+  {
+    "_id": "653b7e23e0406350e6b284c6",
+    "name": "banana"
+  },
+  {
+    "_id": "653b7e29e0406350e6b284c8",
+    "name": "cetriolo"
+  },
+  {
+    "_id": "653b7e2fe0406350e6b284ca",
+    "name": "pesca"
+  },
+  {
+    "_id": "653b7e35e0406350e6b284cc",
+    "name": "albicocca"
+  },
+  {
+    "_id": "653b7e3be0406350e6b284ce",
+    "name": "sedano"
+  },
+  {
+    "_id": "653b7e3fe0406350e6b284d0",
+    "name": "ciliegia"
+  },
+  {
+    "_id": "653b7e45e0406350e6b284d2",
+    "name": "arancia"
+  },
+  {
+    "_id": "653b7e4be0406350e6b284d4",
+    "name": "limone"
+  },
+  {
+    "_id": "653b7e52e0406350e6b284d6",
+    "name": "pompelmo"
+  },
+  {
+    "_id": "653b7e59e0406350e6b284d8",
+    "name": "mandarino"
+  },
+  {
+    "_id": "653b7e5fe0406350e6b284da",
+    "name": "kiwi"
+  },
+  {
+    "_id": "653b7e69e0406350e6b284de",
+    "name": "susina"
+  },
+  {
+    "_id": "653b7e6fe0406350e6b284e0",
+    "name": "caco"
+  },
+  {
+    "_id": "653b7e75e0406350e6b284e2",
+    "name": "carota"
+  },
+  {
+    "_id": "653b7e83e0406350e6b284e4",
+    "name": "verza"
+  },
+  {
+    "_id": "653b7e8be0406350e6b284e6",
+    "name": "barbabietola"
+  },
+  {
+    "_id": "653b7e95e0406350e6b284e8",
+    "name": "dattero"
+  },
+  {
+    "_id": "653b7ea0e0406350e6b284ea",
+    "name": "fico"
+  },
+  {
+    "_id": "653b7ea5e0406350e6b284ec",
+    "name": "miele"
+  },
+  {
+    "_id": "653b7eade0406350e6b284ee",
+    "name": "fagiolini"
+  },
+  {
+    "_id": "653b7eb2e0406350e6b284f0",
+    "name": "uva"
+  }
+]

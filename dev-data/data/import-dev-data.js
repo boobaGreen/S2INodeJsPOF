@@ -5,8 +5,8 @@ const fs = require('fs');
 const mongoose = require('mongoose');
 
 const dotenv = require('dotenv');
-const Tour = require('../../models/tourModel');
-const Review = require('../../models/reviewModel');
+const Product = require('../../models/productModel');
+const Order = require('../../models/orderModel');
 const User = require('../../models/userModel');
 
 dotenv.config({ path: './config.env' });
@@ -23,17 +23,17 @@ async function dbConnect() {
 dbConnect().catch((err) => console.log(err));
 
 // HERE CHANGE THE FILE NAME TO CHOOSE AND IMPORT MANUALLY
-const tours = JSON.parse(fs.readFileSync(`${__dirname}/tours.json`, 'utf-8'));
-const users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, 'utf-8'));
-const reviews = JSON.parse(
-  fs.readFileSync(`${__dirname}/reviews.json`, 'utf-8'),
+const products = JSON.parse(
+  fs.readFileSync(`${__dirname}/products.json`, 'utf-8'),
 );
+const users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, 'utf-8'));
+const orders = JSON.parse(fs.readFileSync(`${__dirname}/orders.json`, 'utf-8'));
 
 const importData = async () => {
   try {
-    await Tour.create(tours);
+    await Product.create(products);
     await User.create(users, { validateBeforeSave: false });
-    await Review.create(reviews);
+    await Order.create(orders);
     console.log('Data succsefully loaded! ');
   } catch (err) {
     console.log(err);
@@ -42,8 +42,8 @@ const importData = async () => {
 
 const deleteData = async () => {
   try {
-    await Tour.deleteMany();
-    await Review.deleteMany();
+    await Product.deleteMany();
+    await Order.deleteMany();
     await User.deleteMany();
     console.log('Data succsefully deleted! ');
     process.exit();

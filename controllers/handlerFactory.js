@@ -9,7 +9,7 @@ exports.deleteOne = (Model) =>
     if (!doc) {
       return next(new AppError('No document found with that ID', 404));
     }
-    res.status(204).json({ status: 'succes', data: null });
+    res.status(204).json({ status: 'success', data: null });
   });
 
 // PATCH
@@ -46,7 +46,7 @@ exports.getOne = (Model, popOptions) =>
     if (!doc) {
       return next(new AppError('No document found with that ID', 404));
     }
-    res.status(200).json({ status: 'succes', data: { doc } });
+    res.status(200).json({ status: 'success', data: { doc } });
   });
 
 // GET ALL

@@ -18,20 +18,24 @@ const orderSchema = new mongoose.Schema(
         required: [true, 'Order must contain one or more products.'],
       },
     ],
+    createdAt: {
+      type: Date,
+      default: Date.now(),
+    },
   },
-  {
-    toJSON: { virtuals: true },
-    toObject: { virtuals: true },
-  },
+  // {
+  //   toJSON: { virtuals: true },
+  //   toObject: { virtuals: true },
+  // },
 );
 
 orderSchema.pre(/^find/, function (next) {
   this.populate({
-    path: 'user',
+    path: 'buyers',
     select: 'name',
   });
   this.populate({
-    path: 'product',
+    path: 'products',
     select: 'name',
   });
   next();

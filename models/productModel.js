@@ -18,7 +18,7 @@ const productSchema = new mongoose.Schema(
       ],
       validate: {
         validator: (val) => validator.isAlpha(val, ['en-US'], { ignore: ' -' }), //" =" => " " & "-"
-        message: 'A tour name must only contain characters between A-Z',
+        message: 'A product name must only contain characters between A-Z',
       },
     },
     //slug: String,
