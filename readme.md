@@ -78,7 +78,7 @@ in the example above it is a local MongoDb database but you can also connect one
 mongodb+srv://claudiodallara77:cA3K32LqwPsvsqWs@cluster0.3dfdb4w.mongodb.net/POF-S2I-NodeJs?retryWrites=true&w=majority
 ```
 
-### 5 - Extra - add some fake default data service for Testing and Try
+### 5 - Extra - Import already packaged data for Testing
 
 The dev-data folder contains sample data to help test your project: orders.json, products.json, and user.json.
 There is also a file utility `import-dev-data.js` that is used to import sample files with one click or delete the entire database.
