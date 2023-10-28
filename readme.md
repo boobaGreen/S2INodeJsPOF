@@ -99,6 +99,8 @@ node dev-data\data\import-dev-data.js --delete
 
 Using something like Postman, you can start using this API on the the same port (in the example : 3000).
 
+For convenience, with the button below you can access the entire collection relating to the project on postman with all the queries already ready to be tested.
+
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29686969-8160f5f1-20a3-46ab-9f91-eeae9e858ef1?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D29686969-8160f5f1-20a3-46ab-9f91-eeae9e858ef1%26entityType%3Dcollection%26workspaceId%3D876f4699-cfab-4d6d-a566-22ea8c0045e9)
 
 ## :open_file_folder: Endpoints
