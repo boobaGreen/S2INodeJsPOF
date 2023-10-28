@@ -4,8 +4,6 @@ const productController = require('../controllers/productController');
 
 const router = express.Router();
 
-//router.route('/top-5').get(productController.getAllProducts);
-
 router
   .route('/')
   .get(productController.getAllProducts)
