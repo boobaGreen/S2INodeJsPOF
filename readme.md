@@ -78,11 +78,7 @@ in the example above it is a local MongoDb database but you can also connect one
 mongodb+srv://claudiodallara77:cA3K32LqwPsvsqWs@cluster0.3dfdb4w.mongodb.net/POF-S2I-NodeJs?retryWrites=true&w=majority
 ```
 
-### 5 - Test it with a client
-
-Using something like Postman, you can start using this API on the the same port (in the example : 3000).
-
-### 6 - Extra - add some fake default data service for Testing and Try
+### 5 - Extra - add some fake default data service for Testing and Try
 
 The dev-data folder contains sample data to help test your project: orders.json, products.json, and user.json.
 There is also a file utility `import-dev-data.js` that is used to import sample files with one click or delete the entire database.
@@ -98,6 +94,12 @@ to delete use instead:
 ```
 node dev-data\data\import-dev-data.js --delete
 ```
+
+### 6 - Test it with a client
+
+Using something like Postman, you can start using this API on the the same port (in the example : 3000).
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29686969-8160f5f1-20a3-46ab-9f91-eeae9e858ef1?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D29686969-8160f5f1-20a3-46ab-9f91-eeae9e858ef1%26entityType%3Dcollection%26workspaceId%3D876f4699-cfab-4d6d-a566-22ea8c0045e9)
 
 ## :open_file_folder: Endpoints
 
@@ -206,5 +208,5 @@ You can join an intervals to a target with a PATCH request on this endpoint:
 
 ## :e-mail: Contact Me
 
-Any questions? Send me an e-mail here: cristopherturazza@gmail.com <br>
-You can find my Linkedin profile here: https://www.linkedin.com/in/cristopher-turazza-0863a026/
+Any questions? Send me an e-mail here: claudiodallara77@gmail.com <br>
+You can find my Linkedin profile here: https://www.linkedin.com/in/claudio-dall-ara-244816175/
