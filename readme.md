@@ -50,11 +50,13 @@ After the installation, you're ready to go.
 
 add this script at "package.json" file
 
+```
 "scripts": {
 "start": "nodemon server.js",
 "start:prod": "SET NODE_ENV=production&&nodemon server.js",
 "debug": "ndb server.js"
-},
+}
+```
 
 `npm start` - start in DEV mode default (error's message are set for developers)
 `npm start:prod ` - start in PROD mode (error's messages are set for clients)
@@ -82,10 +84,16 @@ The dev-data folder contains sample data to help test your project: orders.json,
 There is also a file utility `import-dev-data.js` that is used to import sample files with one click or delete the entire database.
 
 from the terminal in the main project folder launch the following command to import the files:
+
+```
 node dev-data\data\import-dev-data.js --import
+```
 
 to delete use instead:
+
+```
 node dev-data\data\import-dev-data.js --delete
+```
 
 ## :open_file_folder: Endpoints
 
