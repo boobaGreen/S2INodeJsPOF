@@ -64,6 +64,7 @@ add this scripts at your "package.json" file :
 ### 4 - Connect your MongoDB database
 
 Create, if don't exist, a `config.env` file and the insert an enviroment variable named `DB` with your MongoDB connection string. Set a `PORT` , in the example is "3000" , if not set the default is 5000.
+There is a configFAKE.env file as an example and as a possible template.
 
 EXAMPLE "config.env" :
 
