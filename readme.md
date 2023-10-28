@@ -48,53 +48,44 @@ After the installation, you're ready to go.
 
 ### 3 - Start it
 
-`npm start`
+add this script at "package.json" file
+
+"scripts": {
+"start": "nodemon server.js",
+"start:prod": "SET NODE_ENV=production&&nodemon server.js",
+"debug": "ndb server.js"
+},
+
+`npm start` - start in DEV mode default (error's message are set for developers)
+`npm start:prod ` - start in PROD mode (error's messages are set for clients)
 
 ### 4 - Connect your MongoDB database
 
 `LOCAL DATABASE MODE`
-Create, if don't exist, a `config.env` file and the insert an enviroment variable named `DATABASE_LOCAL` with your MongoDB connection string. Set a `PORT` , in the example is "3000" , if not set the default is 5000.
+Create, if don't exist, a `config.env` file and the insert an enviroment variable named `DB` with your MongoDB connection string. Set a `PORT` , in the example is "3000" , if not set the default is 5000.
 
-To work on the local database, finally make sure that the code block in the server.js file on line 15 is:
-
-const DB = process.env.DATABASE_LOCAL.replace(
-'<password>',
-process.env.DATABASE_PASSWORD,
-);
-
-EXAMPLE LOCAL:
-"config.env" file Local Database:
+EXAMPLE "config.env" :
 PORT=3000
-DATABASE_LOCAL=mongodb://localhost:27017/NodePOFLocal
+DB=mongodb://localhost:27017/NodePOFLocal
 
-`CLOUD DATABASE MODE`
-Create, if don't exist, a `config.env` file and the insert an enviroment variable named `DATABASE_CLOUD` with your MongoDB connection string.
+in the example above it is a local MongoDb database but you can also connect one in the cloud , the string will be approximately :
 
-The string is for example :
-
-DATABASE=mongodb+srv://claudiodallara77:<password>@cluster0.2escc8w.mongodb.net/POF-S2I-NodeJs?retryWrites=true&w=majority
-
-where "POF-S2I-NodeJs" indicates the database name in thi case :"POF-S2I-NodeJs".
-I preferred to keep the <password> further separate and must be entered separately in the config.env file
-
-Set a `PORT` , in the example is "3000" , if not set the default is 5000.
-
-To work on the cloud database, finally make sure that the code block in the server.js file on line 15 is:
-
-const DB = process.env.DATABASE_CLOUD.replace(
-'<password>',
-process.env.DATABASE_PASSWORD,
-);
-
-EXAMPLE CLOUD:
-"config.env" file Local Database:
-PORT=3000
-DATABASE_PASSWORD=dB2Q24TvqPvwdqPw
-DATABASE_CLOUD=mongodb+srv://claudiodallara77:<password>@cluster0.2efcc6w.mongodb.net/POF-S2I-NodeJs?retryWrites=true&w=majority
+mongodb+srv://claudiodallara77:cA3K32LqwPsvsqWs@cluster0.3dfdb4w.mongodb.net/POF-S2I-NodeJs?retryWrites=true&w=majority
 
 ### 5 - Test it with a client
 
-Using something like Postman, Thunderclient or Insomnia, you can start using this API on the the same port (in the example : 3000).
+Using something like Postman, you can start using this API on the the same port (in the example : 3000).
+
+### 6 - Extra - add some fake default data service for Testing and Try
+
+The dev-data folder contains sample data to help test your project: orders.json, products.json, and user.json.
+There is also a file utility `import-dev-data.js` that is used to import sample files with one click or delete the entire database.
+
+from the terminal in the main project folder launch the following command to import the files:
+node dev-data\data\import-dev-data.js --import
+
+to delete use instead:
+node dev-data\data\import-dev-data.js --delete
 
 ## :open_file_folder: Endpoints
 

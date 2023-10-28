@@ -12,14 +12,9 @@ dotenv.config({ path: './config.env' });
 
 const app = require('./app');
 
-const DB = process.env.DATABASE_LOCAL.replace(
-  '<password>',
-  process.env.DATABASE_PASSWORD,
-);
-
 // MOONGOOSE 7
 async function dbConnect() {
-  await mongoose.connect(DB);
+  await mongoose.connect(process.env.DB);
 }
 dbConnect();
 

@@ -11,14 +11,9 @@ const User = require('../../models/userModel');
 
 dotenv.config({ path: './config.env' });
 
-const DB = process.env.DATABASE.replace(
-  '<password>',
-  process.env.DATABASE_PASSWORD,
-);
-
 async function dbConnect() {
-  await mongoose.connect(DB);
-  console.log('Db successfullt connected !!!');
+  await mongoose.connect(process.env.DB);
+  console.log('Db successfullt connected !!! 🌐');
 }
 dbConnect().catch((err) => console.log(err));
 
@@ -34,7 +29,8 @@ const importData = async () => {
     await Product.create(products);
     await User.create(users, { validateBeforeSave: false });
     await Order.create(orders);
-    console.log('Data succsefully loaded! ');
+    console.log('Data succsefully loaded! ❎ ');
+    process.exit();
   } catch (err) {
     console.log(err);
   }
@@ -45,7 +41,7 @@ const deleteData = async () => {
     await Product.deleteMany();
     await Order.deleteMany();
     await User.deleteMany();
-    console.log('Data succsefully deleted! ');
+    console.log('Data succsefully deleted! ✅ ');
     process.exit();
   } catch (err) {
     console.log(err);
@@ -57,5 +53,3 @@ if (process.argv[2] === '--import') {
 } else if (process.argv[2] === '--delete') {
   deleteData();
 }
-
-console.log(process.argv);
