@@ -48,7 +48,7 @@ After the installation, you're ready to go.
 
 ### 3 - Start it
 
-add this script at "package.json" file
+add this scripts at your "package.json" file :
 
 ```
 "scripts": {
@@ -63,12 +63,14 @@ add this script at "package.json" file
 
 ### 4 - Connect your MongoDB database
 
-`LOCAL DATABASE MODE`
 Create, if don't exist, a `config.env` file and the insert an enviroment variable named `DB` with your MongoDB connection string. Set a `PORT` , in the example is "3000" , if not set the default is 5000.
 
 EXAMPLE "config.env" :
+
+```
 PORT=3000
 DB=mongodb://localhost:27017/NodePOFLocal
+```
 
 in the example above it is a local MongoDb database but you can also connect one in the cloud , the string will be approximately :
 
