@@ -74,7 +74,9 @@ DB=mongodb://localhost:27017/NodePOFLocal
 
 in the example above it is a local MongoDb database but you can also connect one in the cloud , the string will be approximately :
 
+```
 mongodb+srv://claudiodallara77:cA3K32LqwPsvsqWs@cluster0.3dfdb4w.mongodb.net/POF-S2I-NodeJs?retryWrites=true&w=majority
+```
 
 ### 5 - Test it with a client
 
