@@ -81,7 +81,7 @@ mongodb+srv://claudiodallara77:cA3K32LqwPsvsqWs@cluster0.3dfdb4w.mongodb.net/POF
 
 ### 5 - Extra - Import already packaged data for Testing
 
-The dev-data folder contains sample data to help test your project: orders.json, products.json, and user.json.
+The dev-data folder contains sample data to help test your project: `orders.json` `products.json` , and `orders.json` .
 There is also a file utility `import-dev-data.js` that is used to import sample files with one click or delete the entire database.
 
 from the terminal in the main project folder launch the following command to import the files:
