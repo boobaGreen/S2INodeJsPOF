@@ -100,7 +100,7 @@ node dev-data\data\import-dev-data.js --delete
 
 Using something like Postman, you can start using this API on the the same port (in the example : 3000).
 
-For convenience, with the button below you can access the entire collection relating to the project on postman with all the queries already ready to be tested.
+For convenience, with the button below you can access the entire collection relating to the project on postman with all the queries and documentation.
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29686969-8160f5f1-20a3-46ab-9f91-eeae9e858ef1?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D29686969-8160f5f1-20a3-46ab-9f91-eeae9e858ef1%26entityType%3Dcollection%26workspaceId%3D876f4699-cfab-4d6d-a566-22ea8c0045e9)
 
@@ -136,18 +136,15 @@ Finally, you can add a new user with a POST request:
 ### Products
 
 You can get the entire targets list with a GET request:
-
 `/api/v1/products`
 
 or GET data for a specific target:
-
 `/api/v1/products/:productsID`
 
 :productsID must be a valid MongoDB id.  
 You can PATCH or DELETE a target with the same endpoint.
 
 Finally, you can add a new target with a POST request:
-
 `/api/v1/products`
 
 ```json
@@ -159,17 +156,25 @@ Finally, you can add a new target with a POST request:
 ### Orders
 
 You can get all the available orders with a GET request
-
 `/api/v1/orders`
 
-or GET data for a specific product by id:
+You can get all the order for one specific day (in this example 2023-10-27) with this GET request .
+`/api/v1/orders/?createdAt[lte]=2023-10-27T23:59:59.999Z&createdAt[gte]=2023-10-27T00:00:00.000Z`
 
+You can get all the order after a specific day&time (in this example 2023-10-27 , 20:30) with this GET request .
+`/api/v1/orders/?createdAt[gte]=2023-10-27T11:58:52.255Z`
+
+You can get all the order before a specific day&time (in this example 2023-10-27 , 11:58:52) with this GET request .
+`/api/v1/orders/?createdAt[lte]=2023-10-27T11:58:52.000Z`
+
+You can
+
+or GET data for a specific product by id:
 `/api/v1/:ordersID`
 
 You can PATCH or DELETE a target with the same endpoint.
 
 For a new interval, use a POST request:
-
 `/api/v1/orders`
 
 ```json
