@@ -197,7 +197,7 @@ For a new order, use a POST request:
 
 the `"createdAt"` field will then be created which will be used for the filters and display order according to the main requirements
 
-## :mag_right: APIfeautures
+## :mag_right: API feautures
 
 In all the GET function you can set the fields you want to project in the response object or to not include("-", minus sign before the name without space)
 
