@@ -136,15 +136,18 @@ Finally, you can add a new user with a POST request:
 ### Products
 
 You can get the entire targets list with a GET request:
+
 `/api/v1/products`
 
 or GET data for a specific target:
+
 `/api/v1/products/:productsID`
 
 :productsID must be a valid MongoDB id.  
 You can PATCH or DELETE a target with the same endpoint.
 
 Finally, you can add a new target with a POST request:
+
 `/api/v1/products`
 
 ```json
@@ -156,25 +159,33 @@ Finally, you can add a new target with a POST request:
 ### Orders
 
 You can get all the available orders with a GET request
+
 `/api/v1/orders`
 
 You can get all the order for one specific day (in this example 2023-10-27) with this GET request .
+
 `/api/v1/orders/?createdAt[lte]=2023-10-27T23:59:59.999Z&createdAt[gte]=2023-10-27T00:00:00.000Z`
 
 You can get all the order after a specific day&time (in this example 2023-10-27 , 20:30) with this GET request .
+
 `/api/v1/orders/?createdAt[gte]=2023-10-27T11:58:52.255Z`
 
 You can get all the order before a specific day&time (in this example 2023-10-27 , 11:58:52) with this GET request .
+
 `/api/v1/orders/?createdAt[lte]=2023-10-27T11:58:52.000Z`
 
-You can
+You can get all the orders that contain a specific product or a specific list of products by they "name" field , separate by a comma:
+
+`/api/v1/orders/getOrdersByProductName?productNames=dattero,miele`
 
 or GET data for a specific product by id:
+
 `/api/v1/:ordersID`
 
 You can PATCH or DELETE a target with the same endpoint.
 
-For a new interval, use a POST request:
+For a new order, use a POST request:
+
 `/api/v1/orders`
 
 ```json
@@ -184,7 +195,24 @@ For a new interval, use a POST request:
 }
 ```
 
-the "createdAt" field will then be created which will be used for the filters and display order according to the main requirements
+the `"createdAt"` field will then be created which will be used for the filters and display order according to the main requirements
+
+## :mag_right: APIfeautures
+
+In all the GET function you can set the fields you want to project in the response object or to not include("-", minus sign before the name without space)
+
+EXAMPLE (exclude the "\_\_v" field from this response):
+`/api/v1/products/?page=2&limit=3&fields=-v`
+
+In all GetAllOrders,GetAllUsers and GetAllProducts you can set a `limit` and the page selected for every query .
+EXAMPLE (set : page 2 , limit 3):
+`/api/v1/products/?page=2&limit=3`.
+
+You can `sort` the response of the GetAll functions :
+EXAMPLE (sort ascending by name):
+`/api/v1/products/?sort=name`.
+
+For the orders get all the default orders is "-createdAt" (decrescent first, the newst before) , for switch use "sort=createdAt" (no minus sign)
 
 ## :page_with_curl: License
 
