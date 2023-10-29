@@ -52,10 +52,10 @@ add this scripts at your "package.json" file :
 
 ```
 "scripts": {
-"start": "nodemon server.js",
-"start:prod": "SET NODE_ENV=production&&nodemon server.js",
-"debug": "ndb server.js"
-}
+    "start": "SET NODE_ENV=development&&nodemon server.js",
+    "start:prod": "SET NODE_ENV=production&&nodemon server.js",
+    "debug": "ndb server.js"
+  },
 ```
 
 `npm start` - start in DEV mode default (error's message are set for developers)
@@ -106,104 +106,80 @@ For convenience, with the button below you can access the entire collection rela
 
 ## :open_file_folder: Endpoints
 
+I used the envoiroments variable {{URL}} which in DEV mode can be replaced directly by 127.0.0.1:3000 (or instead of 3000 the port you are using), and in the PROD phase it can be replaced by the domain real.
+
 ### Users
 
 You can get the entire users list with a GET request:
 
-`/users`
+`/api/v1/users/`
 
 or GET data for a specific user:
 
-`/users/:userID`
+`/api/v1/users/:userID`
 
 :userID must be a valid MongoDB id.  
 You can PATCH or DELETE user data with the same endpoint.
 
 Finally, you can add a new user with a POST request:
 
-`/users`
+`/api/v1/users/`
 
 ```json
 {
-    "name": "insert an alphanumeric string, min 2 characters",
-    "surname": "insert an alphanumeric string, min 2 characters"
-    "email": "insert a valid email"
+  "name": "insert an alphanumeric string (apostrophe exception), min 2 characters , max 40",
+  "surname": "insert an alphanumeric string (apostrophe exception), min 2 characters , max 40",
+  "email": "insert a valid email"
 }
 ```
 
-### Targets
+### Products
 
 You can get the entire targets list with a GET request:
 
-`/targets`
+`/api/v1/products`
 
 or GET data for a specific target:
 
-`/targets/:targetID`
+`/api/v1/products/:productsID`
 
-:targetID must be a valid MongoDB id.  
+:productsID must be a valid MongoDB id.  
 You can PATCH or DELETE a target with the same endpoint.
 
 Finally, you can add a new target with a POST request:
 
-`/targets`
+`/api/v1/products`
 
 ```json
 {
-    "title": "insert a, min 2 characters, max 30",
-    "description": "insert a string, min 2 characters, max 300"
-    "days": "insert a number"
+  "name": "an alphanumeric string (`-` exception) , min 3 characters, max 40"
 }
 ```
 
-### Intervals
+### Orders
 
-You can get all the available targets with a GET request
+You can get all the available orders with a GET request
 
-`/intervals`
+`/api/v1/orders`
 
-or GET data for a specific interval:
+or GET data for a specific product by id:
 
-`/intervals/:intervalID`
+`/api/v1/:ordersID`
 
 You can PATCH or DELETE a target with the same endpoint.
 
 For a new interval, use a POST request:
 
-`/intervals`
+`/api/v1/orders`
 
 ```json
 {
-  "owner": "insert a valid mongoID that rappresent the interval user owner",
-  "startdate": "insert a valid ISO date",
-  "enddate": "insert a valid ISO date, greater than the startdate"
+  "buyers": ["653afc5f684ac741822e6124", "653b7fd7d6b437985a02a501"],
+  "products": ["653b7e3be0406350e6b284ce", "653b7e2fe0406350e6b284ca"]
 }
 ```
 
-You can filter through the intervals with a SEARCH query:
-
-`/intervals/search`
-
-Filter parameters:
-
-- startdate: insert a valid ISO start date (e.g. 2018-05-22), returns intervals with a greater start date
-- enddate: insert a valid ISO end date (e.g. 2020-03-10), return intervals with a lower end date
-- target: insert a valid MongoDB Id that rappresent a target
-- owner: inser a valid MongoDB Id that rappresent an user
-
-example: `/intervals/search?target=6335c098bb3ddb89f54cd3d6&startdate=2022-08-01`
-
-## Intervals / Targets
-
-You can join an intervals to a target with a PATCH request on this endpoint:
-
-`/targets/:targetID/intervals`
-
-```json
-{
-  "target": "insert a valid MongoDB Id of a target"
-}
-```
+the "createdAt" field will then be created which will be used for the filters and display order according to the main requirements
 
 ## :page_with_curl: License
 

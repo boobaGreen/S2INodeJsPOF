@@ -47,14 +47,18 @@ const sendErrorProduction = (err, res) => {
 };
 
 module.exports = (err, req, res, next) => {
+  console.log('global-1');
   err.statusCode = err.statusCode || 500; // internal server error 500
+  console.log('global-2');
   err.status = err.status || 'error';
+  console.log('global-3');
   if (process.env.NODE_ENV === 'development') {
+    console.log('global-4');
     sendErrorDev(err, res);
   } else if (process.env.NODE_ENV === 'production') {
     let error = { ...err };
-    // error.name = err.name; //
-    // error.message = err.message; //
+    error.name = err.name; //
+    error.message = err.message; //
     if (error.name === 'CastError') error = handleCastErrorDB(error); // "CastError" mongoose when _id for find is no valide
     if (error.code === 11000) error = handleDuplicateFieldsDB(error); // duplicate value in a UNIQUE field
     if (error.name === 'ValidationError')

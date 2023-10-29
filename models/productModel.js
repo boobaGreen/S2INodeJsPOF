@@ -17,19 +17,16 @@ const productSchema = new mongoose.Schema(
         'A product name must have more or equal then 3 characters',
       ],
       validate: {
-        validator: (val) => validator.isAlpha(val, ['en-US'], { ignore: ' -' }), //" =" => " " & "-"
+        validator: (val) => validator.isAlpha(val, ['en-US'], { ignore: '-' }), //" =" => " " & "-"
         message: 'A product name must only contain characters between A-Z',
       },
     },
-    //slug: String,
   },
   {
     toJSON: { virtuals: true },
     toObject: { virtuals: true },
   },
 );
-
-// tourSchema.index({ slug: 1 });
 
 const Product = mongoose.model('Product', productSchema);
 

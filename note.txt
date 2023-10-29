@@ -1,0 +1,5 @@
+
+Don't use ndb it is not maintained instead use node --inspect server.js
+47 voti a favore
+Burak Emre · Lezione 111 · 11 mesi fa
+Start your app with this command and then go to chrome://inspect you will see your app as a target click inspect and you will get the same debugger as Jonas. If it doesn't work press the pause button and it should start to work after a couple of seconds.

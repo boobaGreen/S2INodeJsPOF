@@ -40,7 +40,7 @@ app.use(xss());
 // Prevent parameter pollution
 app.use(
   hpp({
-    whitelist: ['createdAt', 'name'],
+    whitelist: ['createdAt', 'name', 'email', 'surname'],
   }),
 );
 
@@ -49,7 +49,7 @@ app.use('/api/v1/products', productRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/orders', orderRouter);
 
-// Set route for all no match routes
+// set route for all no match routes
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find${req.originalUrl} on this server`, 404));
 });

@@ -8,9 +8,9 @@ const userSchema = new mongoose.Schema(
       required: [true, 'A user must have a name'],
       trim: true,
       maxlength: [40, 'A user name must have less or equal then 30 characters'],
-      minlength: [3, 'A user name must have more or equal then 3 characters'],
+      minlength: [2, 'A user name must have more or equal then 2 characters'],
       validate: {
-        validator: (val) => validator.isAlpha(val, ['en-US'], { ignore: ' -' }), //" =" => " " & "-"
+        validator: (val) => validator.isAlpha(val, ['en-US'], { ignore: `'` }), //" =" => " " & "-"
         message: 'A user name must only contain characters between A-Z',
       },
     },
@@ -23,11 +23,11 @@ const userSchema = new mongoose.Schema(
         'A user surname must have less or equal then 30 characters',
       ],
       minlength: [
-        3,
-        'A user surname must have more or equal then 3 characters',
+        2,
+        'A user surname must have more or equal then 2 characters',
       ],
       validate: {
-        validator: (val) => validator.isAlpha(val, ['en-US'], { ignore: ' -' }), //" =" => " " & "-"
+        validator: (val) => validator.isAlpha(val, ['en-US'], { ignore: `'` }), //" =" => " " & "-"
         message: 'A user surname must only contain characters between A-Z',
       },
     },
