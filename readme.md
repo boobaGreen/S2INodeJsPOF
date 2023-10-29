@@ -212,7 +212,17 @@ You can `sort` the response of the GetAll functions :
 EXAMPLE (sort ascending by name):
 `/api/v1/products/?sort=name`.
 
-For the orders get all the default orders is "-createdAt" (decrescent first, the newst before) , for switch use "sort=createdAt" (no minus sign)
+For the Orders- "get all" the default orders is "-createdAt" (decrescent first, the newst before) , for switch use "sort=createdAt" (no minus sign)
+
+## :triangular_ruler: Database Architecture
+
+The Product collection is very simple with only the "name" field.
+I only set the validation rules (see Endpoints section)
+
+The User collection is very simple with the "name","surname" and the "email" fields.
+I only set the validation rules (see Endpoints section)
+
+For "Order collection" however, different choices could already be made. Each order will have a list of related products and a list of buyers. Given the nature of small and widespread purchasing groups for example from small direct growers, I thought that the lists would never be too long (one - few). I therefore decided to register an array containing the IDs of the "buyers" and an array with the IDs of the products. I therefore decided that in the get phase the other details are also populated which are therefore virtual fields of both the product and the users
 
 ## :page_with_curl: License
 
