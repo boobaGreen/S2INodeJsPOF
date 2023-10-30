@@ -33,6 +33,11 @@ For this project where used Node.js (with Express framework) and MongoDB databas
 - Validator (A library of string validators and sanitizers. For strings only .)
 - Xss-clean (Data sanitazation agains XSS Deprecate but working)
 
+## :zap: # Test Endpoint now !
+
+if you want to immediately test the endpoints use this link:
+`https://s2i-pof.onrender.com/`
+
 ## :floppy_disk: Installation
 
 First of all, you need Node.js installed.  
