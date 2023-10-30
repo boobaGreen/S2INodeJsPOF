@@ -5,7 +5,7 @@ const AppError = require('../utils/appError');
 exports.getOrdersByProductNames = catchAsync(async (req, res, next) => {
   const productNames = req.query.productNames.split(',');
 
-  // Cerca ordini che contengono **tutti** i nomi dei prodotti forniti
+  // Look for orders that contain **all** of the supplied product names
   const orders = await Order.find({});
   if (!orders) {
     return next(new AppError('Error getting Orders Document', 404));
