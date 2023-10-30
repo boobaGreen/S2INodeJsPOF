@@ -31,16 +31,16 @@ For this project where used Node.js (with Express framework) and MongoDB databas
 - Validator (A library of string validators and sanitizers. For strings only .)
 - Xss-clean (Data sanitazation agains XSS Deprecate but working)
 
+## :zap: Try the endpoint without clone
+
+Try the endopoint here : `https://s2i-pof.onrender.com` !
+
 ## :floppy_disk: Installation
 
 First of all, you need Node.js installed.  
 If you don't have it, you can download it here:
 [Node.js](https://nodejs.org/it/download/)  
 After the installation, you're ready to go.
-
-## :zap: Try the endpoint without clone 
-
-Try the endopoint here : `https://s2i-pof.onrender.com` !
 
 ### 1 - Clone the repository
 
