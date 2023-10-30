@@ -108,6 +108,8 @@ For convenience, with the button below you can access the entire collection rela
 
 I used the envoiroments variable {{URL}} which in DEV mode can be replaced directly by 127.0.0.1:3000 (or instead of 3000 the port you are using), and in the PROD phase it can be replaced by the domain real.
 
+For the deploy site use the real name , in my case : `https://s2i-pof.onrender.com`
+
 ### Users
 
 You can get the entire users list with a GET request:
