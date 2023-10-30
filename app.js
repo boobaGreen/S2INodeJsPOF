@@ -54,6 +54,7 @@ app.use('/api/v1/orders', orderRouter);
 
 // set route for all no match routes
 app.all('*', (req, res, next) => {
+  console.log('app.js app.all');
   next(new AppError(`Can't find${req.originalUrl} on this server`, 404));
 });
 
