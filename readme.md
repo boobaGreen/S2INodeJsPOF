@@ -38,6 +38,10 @@ If you don't have it, you can download it here:
 [Node.js](https://nodejs.org/it/download/)  
 After the installation, you're ready to go.
 
+## :zap: Try the endpoint without clone 
+
+Try the endopoint here : `https://s2i-pof.onrender.com` !
+
 ### 1 - Clone the repository
 
 `git clone https://github.com/boobaGreen/S2INodeJsPOF`

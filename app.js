@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 // Limit request
 const limiter = rateLimit({
-  max: 500,
+  max: 50000,
   windowMs: 60 * 60 * 1000,
   message: 'Too many request from this IP, please try again in an hour',
 }); // 429 Error
