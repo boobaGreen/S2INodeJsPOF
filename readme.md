@@ -61,7 +61,6 @@ add this scripts at your "package.json" file :
 "scripts": {
     "start": "SET NODE_ENV=development&&nodemon server.js",
     "start:prod": "SET NODE_ENV=production&&nodemon server.js",
-    "debug": "ndb server.js"
   },
 ```
 
