@@ -1,5 +1,3 @@
-test
-
 # :strawberry: POF - Planty of Food
 
 REST API for manage purchasing group
