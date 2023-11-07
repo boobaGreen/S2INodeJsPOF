@@ -210,7 +210,7 @@ the `"createdAt"` field will then be created which will be used for the filters 
 In all the GET function you can set the fields you want to project in the response object or to not include("-", minus sign before the name without space)
 
 EXAMPLE (exclude the "\_\_v" field from this response):
-`/api/v1/products/?page=2&limit=3&fields=-v`
+`/api/v1/products/?page=2&limit=3&fields=-_v`
 
 In all GetAllOrders,GetAllUsers and GetAllProducts you can set a `limit` and the page selected for every query .
 EXAMPLE (set : page 2 , limit 3):
@@ -220,7 +220,7 @@ You can `sort` the response of the GetAll functions :
 EXAMPLE (sort ascending by name):
 `/api/v1/products/?sort=name`.
 
-For the Orders- "get all" the default orders is "-createdAt" (decrescent first, the newst before) , for switch use "sort=createdAt" (no minus sign)
+For the Orders- "get all" the default orders is "-createdAt" (newest first) , for switch use "sort=createdAt" (no minus sign)
 
 ## :triangular_ruler: Database Architecture
 
