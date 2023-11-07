@@ -14,7 +14,7 @@ This API has three data Schemas:
 - Products: data of the products
 - Orders: data on which users and which products they have inserted in the specific order
 
-Using the correct [endpoints](#endpoints) you can Create, Read, Update ore Delete (CRUD) what do you want.
+Using the correct [endpoints] you can Create, Read, Update ore Delete (CRUD) what do you want.
 Finally, you can search through the intervals with some queries.
 For this project where used Node.js (with Express framework) and MongoDB database.
 
