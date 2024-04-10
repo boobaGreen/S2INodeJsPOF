@@ -239,4 +239,4 @@ For "Order collection" however, different choices could already be made. Each or
 ## :e-mail: Contact Me
 
 Any questions? Send me an e-mail here: claudiodallara77@gmail.com <br>
-You can find my Linkedin profile here: https://www.linkedin.com/in/claudio-dall-ara-244816175/
+You can find my Linkedin profile here: https://www.linkedin.com/in/claudio-dall-ara-730aa0302/
